@@ -1,9 +1,10 @@
 package com.example.kotlindemo
 
 import bean.User
+import classlearn.Fruits
+import classlearn.Fruits2
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 
 /**
@@ -51,9 +52,19 @@ class ExampleUnitTest {
 
         var baseActivity :BaseActivity = SecondActivity()
          baseActivity.abc2()
-
     }
 
+    @Test
+    fun constructorTest(){
+//        var banana:Fruits = Fruits("主构造函数")
+//        var ba1:Fruits = Fruits()
+//        ba1.println()
+       // banana.println()
+
+        var  fruits2  = Fruits2()
+        fruits2.println()
+
+    }
 
 
 

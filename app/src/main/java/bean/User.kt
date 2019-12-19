@@ -7,7 +7,7 @@ package bean
  * view.setBackgroundColor(Color.RED)
  * 👆这样写会报错，Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type View?。
  * 所以使用 ?. 调用
- * 
+ *
  *例如： view?.setBackgroundColor(Color.RED)
  */
 class User {
