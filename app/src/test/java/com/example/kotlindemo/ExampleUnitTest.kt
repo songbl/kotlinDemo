@@ -93,7 +93,6 @@ class ExampleUnitTest {
         //伴生类  模拟 Java   final+static
         val appId = CompanionSample.AppId
         println(appId)
-
     }
 
 
