@@ -19,7 +19,7 @@ class Fruits constructor(method :String ) : Food(){
     var method:String ?= null
 
     //3.初始化的代码放到以init关键字作为前缀的代码块中
-    // 主构造函数，走下面的init中的逻辑
+    // 初始化代码块，先于下面的构造器执行
     init {
         this.method = method
         println("init 执行")

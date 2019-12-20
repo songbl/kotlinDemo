@@ -29,4 +29,8 @@ class Fruits2 constructor() : Food(){
     fun println(){
         println(col)
     }
+
+    fun method(final2: String) {
+        val final3 = "The parameter is " + final2
+    }
 }

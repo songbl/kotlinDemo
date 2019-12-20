@@ -2,6 +2,8 @@ package com.example.kotlindemo
 
 import com.example.kotlindemo.bean.UserBean
 import com.example.kotlindemo.constructorstudy.Fruits2
+import com.example.kotlindemo.specialclass.CompanionSample
+import com.example.kotlindemo.specialclass.SingleInstance
 import com.example.kotlindemo.specialclass.UserImpl
 import com.example.kotlindemo.specialclass.UserInner
 import org.junit.Assert.assertEquals
@@ -84,6 +86,15 @@ class ExampleUnitTest {
     }
 
 
+    @Test
+    fun SingleInstanceTest(){
+        println(SingleInstance.name)
+        SingleInstance.method()
+        //伴生类  模拟 Java   final+static
+        val appId = CompanionSample.AppId
+        println(appId)
+
+    }
 
 
 
