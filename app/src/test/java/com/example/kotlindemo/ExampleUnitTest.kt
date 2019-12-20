@@ -1,8 +1,9 @@
 package com.example.kotlindemo
 
-import bean.User
-import classlearn.Fruits
-import classlearn.Fruits2
+import com.example.kotlindemo.bean.UserBean
+import com.example.kotlindemo.constructorstudy.Fruits2
+import com.example.kotlindemo.specialclass.UserImpl
+import com.example.kotlindemo.specialclass.UserInner
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -44,9 +45,9 @@ class ExampleUnitTest {
 
     @Test
     fun classTest(){
-        var user:User = User()
+        var user:UserBean = UserBean()
         //类型可以省略，能够自动推导出来
-        var user2 = User()
+        var user2 = UserBean()
         println(user.test())
         println(user2.test())
 
@@ -66,7 +67,21 @@ class ExampleUnitTest {
 
     }
 
+    @Test
+    fun InnerClassTest(){
+        //理解猜测：UserInner(),创建对象的时候，带括号，像是调用主构造函数的意思似的，同理
+        //内部类创建，在外部类对象基础上，再调用自己的主构造方法
+        var userName: UserInner.UserName  = UserInner().UserName()
+        userName.l()
+    }
 
+
+    @Test
+    fun InterfaceImplTest(){
+        var user = UserImpl()
+        println( user.getAge())
+        println(user.getName())
+    }
 
 
 

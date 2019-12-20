@@ -1,4 +1,4 @@
-package bean
+package com.example.kotlindemo.bean
 
 //? 用于解除非空限制；就像Java一样了
 //?. 非空成立再调用
@@ -10,7 +10,7 @@ package bean
  *
  *例如： view?.setBackgroundColor(Color.RED)
  */
-class User {
+class UserBean {
     var name :String ?= null
     var age :String ?= null
 
@@ -21,9 +21,10 @@ class User {
         field = "set "+value
     }
 
+
     //Unit返回类型可以省略（类比void，只是不省略）
     fun test() : Unit{
-        print("哈哈 测试")
+        print("哈哈 测试$name")
     }
 
 }

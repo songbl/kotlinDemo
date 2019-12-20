@@ -1,4 +1,4 @@
-package utils
+package com.example.kotlindemo.utils
 
 import android.util.Log
 
