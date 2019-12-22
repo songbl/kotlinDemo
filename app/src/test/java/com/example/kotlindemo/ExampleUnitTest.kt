@@ -1,5 +1,6 @@
 package com.example.kotlindemo
 
+import com.example.kotlindemo.arrayandcollection.ArraySample
 import com.example.kotlindemo.bean.UserBean
 import com.example.kotlindemo.constructorstudy.Fruits2
 import com.example.kotlindemo.conststatic.CompanionStaticSample
@@ -113,6 +114,15 @@ class ExampleUnitTest {
     fun staticFun(){
         println(CompanionStaticSample.staticObj.AppUid)
         CompanionStaticSample.staticObj.testStaticFun()
+    }
+
+
+    //静态的相关测试
+    @Test
+    fun arrayTypeTest(){
+        var arraySample = ArraySample()
+       println(arraySample.arrays.contains("a"))
+
     }
 
 
