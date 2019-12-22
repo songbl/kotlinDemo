@@ -1,5 +1,7 @@
 package com.example.kotlindemo.specialclass
 
+import android.util.Log
+
 
 /**
  * 实现UserImpl，需要重写getName()方法；
@@ -15,4 +17,8 @@ class UserImpl() :IUser {
         return "漩涡鸣人  =子类"
     }
 
+
+    fun printName(user :IUser){
+        Log.e("long",user.getName())
+    }
 }

@@ -6,6 +6,7 @@ package com.example.kotlindemo.specialclass
  */
 
 object SingleInstance {
+
     val name = "object 创建类中的属性"
 
     fun method(){

@@ -1,7 +1,11 @@
-package com.example.kotlindemo
+package com.example.kotlindemo.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.example.kotlindemo.R
+import com.example.kotlindemo.specialclass.IUser
+import com.example.kotlindemo.specialclass.UserImpl
 
 
 //: 表示继承，同样也可以表示实现接口
@@ -15,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        noNameTestFun()
     }
 
 
@@ -24,5 +29,16 @@ class MainActivity : AppCompatActivity() {
     }
     fun abc2() : Unit {
         println("$str"+"二")
+    }
+
+
+
+    fun noNameTestFun(){
+        var user = UserImpl()
+       user.printName(object: IUser{
+           override fun getName(): String {
+               return "匿名 牛逼  接口{}"
+           }
+       })
     }
 }

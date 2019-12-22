@@ -2,10 +2,12 @@ package com.example.kotlindemo
 
 import com.example.kotlindemo.bean.UserBean
 import com.example.kotlindemo.constructorstudy.Fruits2
-import com.example.kotlindemo.specialclass.CompanionSample
+import com.example.kotlindemo.conststatic.CompanionStaticSample
 import com.example.kotlindemo.specialclass.SingleInstance
 import com.example.kotlindemo.specialclass.UserImpl
 import com.example.kotlindemo.specialclass.UserInner
+import com.example.kotlindemo.ui.BaseActivity
+import com.example.kotlindemo.ui.SecondActivity
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -53,7 +55,7 @@ class ExampleUnitTest {
         println(user.test())
         println(user2.test())
 
-        var baseActivity :BaseActivity = SecondActivity()
+        var baseActivity : BaseActivity = SecondActivity()
          baseActivity.abc2()
     }
 
@@ -91,9 +93,28 @@ class ExampleUnitTest {
         println(SingleInstance.name)
         SingleInstance.method()
         //伴生类  模拟 Java   final+static
-        val appId = CompanionSample.AppId
+        val appId = CompanionStaticSample.AppId2
         println(appId)
     }
+
+
+
+    //顶层函数测试
+    @Test
+    fun topfunctionTest() {
+        com.example.kotlindemo.topLevelFuncion()
+    }
+
+
+
+
+    //静态的相关测试
+    @Test
+    fun staticFun(){
+        println(CompanionStaticSample.staticObj.AppUid)
+        CompanionStaticSample.staticObj.testStaticFun()
+    }
+
 
 
 
