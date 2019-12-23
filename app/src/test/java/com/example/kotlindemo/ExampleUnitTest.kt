@@ -1,6 +1,7 @@
 package com.example.kotlindemo
 
 import com.example.kotlindemo.arrayandcollection.ArraySample
+import com.example.kotlindemo.arrayandcollection.CollectionSample
 import com.example.kotlindemo.bean.UserBean
 import com.example.kotlindemo.constructorstudy.Fruits2
 import com.example.kotlindemo.conststatic.CompanionStaticSample
@@ -125,6 +126,15 @@ class ExampleUnitTest {
 
     }
 
+
+    //集合的相关测试
+    @Test
+    fun collectionTest(){
+        var collectionSample = CollectionSample()
+        collectionSample.mutMapTest()
+        println(collectionSample.value1)
+
+    }
 
 
 
